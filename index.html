@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09070b">
+  <meta name="description" content="Rose — an interactive 3D ASCII flower, built for the browser.">
+  <title>Rose — Interactive 3D ASCII Flower</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Rose home">
+        <span class="brand-mark">✳</span><span>ROSE</span>
+      </a>
+      <div class="top-meta"><span class="live-dot"></span> INTERACTIVE GENERATIVE ART</div>
+      <button class="icon-button" id="fullscreenBtn" title="Toggle fullscreen" aria-label="Toggle fullscreen">⛶</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE BIT OF CODE. A LOT OF NATURE.</p>
+        <h1>Beauty in<br><em>every character.</em></h1>
+        <p class="intro">A living rose, built from mathematical curves and rendered one character at a time. Explore its shape, light, and motion.</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="pauseBtn"><span id="pauseIcon">Ⅱ</span><span id="pauseText">Pause bloom</span></button>
+          <button class="quiet-button" id="resetBtn">↺ &nbsp; Reset view</button>
+        </div>
+      </div>
+
+      <div class="stage-wrap">
+        <div class="stage-label"><span>LIVE CANVAS</span><span id="fpsLabel">30 FPS TARGET</span></div>
+        <div class="stage" id="stage">
+          <canvas id="roseCanvas" aria-label="Animated three-dimensional ASCII rose"></canvas>
+          <div class="stage-vignette"></div>
+          <div class="stage-caption"><span>FIG. 01</span><span>ROSA / DIGITAL STUDY</span></div>
+        </div>
+        <p class="drag-hint">↔ &nbsp; DRAG TO ROTATE <span>·</span> SCROLL TO ZOOM</p>
+      </div>
+    </section>
+
+    <section class="control-panel" aria-label="Rose controls">
+      <div class="panel-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h2>Studio controls</h2></div><span class="panel-index">01 / 03</span></div>
+      <div class="controls-grid">
+        <div class="control-group">
+          <label for="paletteSelect">COLOR STORY</label>
+          <select id="paletteSelect">
+            <option value="rose">01 — Velvet rose</option>
+            <option value="classic">02 — Classic red</option>
+            <option value="noir">03 — Silver noir</option>
+            <option value="garden">04 — Garden green</option>
+            <option value="sunset">05 — Warm sunset</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <div class="label-line"><label for="speedRange">ROTATION SPEED</label><output id="speedValue">1.0×</output></div>
+          <input id="speedRange" type="range" min="0" max="2.5" step="0.1" value="1">
+        </div>
+        <div class="control-group">
+          <div class="label-line"><label for="densityRange">CHARACTER DENSITY</label><output id="densityValue">Balanced</output></div>
+          <input id="densityRange" type="range" min="1" max="3" step="1" value="2">
+        </div>
+        <div class="control-group">
+          <label>QUICK ACTIONS</label>
+          <div class="quick-actions">
+            <button class="small-button" id="randomBtn">✦ Surprise me</button>
+            <button class="small-button" id="saveBtn">↓ Save image</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-grid">
+      <article class="detail-card"><span class="card-number">01</span><p class="eyebrow">THE FORM</p><h3>Nature, by numbers.</h3><p>Petals follow a golden-angle spiral, creating the layered rhythm found in natural growth.</p></article>
+      <article class="detail-card"><span class="card-number">02</span><p class="eyebrow">THE MEDIUM</p><h3>Pixels become poetry.</h3><p>Shading is translated into a changing field of ASCII characters and color.</p></article>
+      <article class="detail-card"><span class="card-number">03</span><p class="eyebrow">THE MOMENT</p><h3>Never quite still.</h3><p>Rotate the flower, shift its palette, and find a new angle worth keeping.</p></article>
+    </section>
+
+    <footer class="footer"><span>ROSE © 2026</span><span>MADE WITH MATH & CURIOSITY</span><a href="https://github.com/" target="_blank" rel="noreferrer">VIEW ON GITHUB ↗</a></footer>
+  </main>
+  <script src="src/rose.js"></script>
+</body>
+</html>
