@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070509">
+  <meta name="description" content="A rose blooming from the words I love you in languages from around the world.">
+  <title>Rose — أحبك بكل لغات العالم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="experience" id="experience">
+    <canvas id="roseCanvas" aria-label="A rose forming from the words I love you in many languages"></canvas>
+    <div class="grain"></div>
+    <div class="intro" id="intro">
+      <span class="overline">A MESSAGE WITHOUT BORDERS</span>
+      <h1>Some feelings speak<br><em>every language.</em></h1>
+      <p>Wait for it to bloom.</p>
+    </div>
+    <div class="final-message" id="finalMessage" aria-live="polite">
+      <span class="arabic">أحبك</span>
+      <span class="translation">IN EVERY LANGUAGE, IN EVERY PETAL.</span>
+    </div>
+    <div class="signature">ROSE <span>✳</span> A SMALL UNIVERSE OF WORDS</div>
+    <button class="replay" id="replay" aria-label="Replay the rose animation" title="Replay">↻</button>
+  </main>
+  <script src="src/rose.js"></script>
+</body>
+</html>

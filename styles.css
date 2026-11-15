@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#070509;--rose:#ff4669;--soft:#f4a0ae}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:"DM Mono",monospace}
+.experience{position:relative;width:100%;height:100%;min-height:520px;overflow:hidden;background:radial-gradient(ellipse at 50% 53%,#1d0b13 0%,#0d080e 38%,#070509 75%)}
+#roseCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.grain{position:absolute;inset:-50%;z-index:2;pointer-events:none;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E")}
+.intro{position:absolute;z-index:3;top:8%;left:0;width:100%;text-align:center;pointer-events:none;transition:opacity 1.8s ease,transform 1.8s ease}
+.overline{font-size:9px;letter-spacing:.32em;color:#c68b9b}
+h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,5vw,57px);line-height:1.04;letter-spacing:-.045em;color:#f7e9ed;margin:17px 0 12px}
+h1 em{color:#e9879c;font-weight:400}
+.intro p{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8c7781}
+.intro.hide{opacity:0;transform:translateY(-15px)}
+.final-message{position:absolute;z-index:3;bottom:9%;left:0;width:100%;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;transform:translateY(12px);transition:opacity 2s ease,transform 2s ease;pointer-events:none}
+.final-message.show{opacity:1;transform:translateY(0)}
+.arabic{font-family:"Noto Sans Arabic",serif;font-size:clamp(36px,6vw,58px);font-weight:600;color:#ffd5dd;text-shadow:0 0 28px #ed315c88}
+.translation{font-size:8px;letter-spacing:.27em;color:#b18b98;text-align:center}
+.signature{position:absolute;z-index:3;bottom:25px;left:28px;color:#76616c;font-size:8px;letter-spacing:.2em}
+.signature span{color:#d94c6c;padding:0 7px}
+.replay{position:absolute;z-index:4;right:23px;bottom:18px;width:36px;height:36px;border:1px solid #ffffff20;border-radius:50%;background:#ffffff08;color:#d9a2b0;font-size:19px;opacity:0;pointer-events:none;transition:opacity .8s}
+.replay.show{opacity:1;pointer-events:auto}
+@media(max-width:600px){.intro{top:8%}.overline{font-size:8px}.signature{left:14px;bottom:17px;font-size:7px}.replay{right:12px;bottom:10px}.final-message{bottom:12%}}
